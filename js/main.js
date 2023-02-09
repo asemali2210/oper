@@ -70,7 +70,7 @@ sideHelpBox.style.bottom = `20%`;
 sidePromotion.style.height = `${operPromotion.getBoundingClientRect().height}px`;
 sidePromotionBox.style.bottom = `15%`;
 
-
+document.getElementByTagName("body").style.backgroundColor = "#ffff";
 
 console.log(operHeader.getBoundingClientRect())
 console.log(sideHeading.getBoundingClientRect())
