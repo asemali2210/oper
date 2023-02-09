@@ -1,0 +1,53 @@
+@import '../abstract/vars';
+@import '../abstract/mixins';
+
+.discount__promotion{
+    @include backgroundElipse(100%, -20px);
+
+    .discount__box{
+        .discount__title{
+            display: flex;
+            justify-content: space-around;
+            p._under-line{
+                position: relative;
+                font-size: 22px;
+                font-weight: 600;
+                align-self: flex-start;
+                padding-bottom: 10px;
+                margin-left: 10px;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 75px;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $offWh;
+                }
+            }
+            p._num{
+                margin-left: 15px;
+                font-size: 44px;
+                font-weight: 600;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .discount__box{
+            .discount__title{
+                p._under-line{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .discount__box{
+            .discount__title{
+                p._under-line{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

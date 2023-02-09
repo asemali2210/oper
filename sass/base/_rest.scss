@@ -1,0 +1,17 @@
+@import '../abstract/vars';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+a, a:hover{
+    color: $wh;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+input:focus{
+    outline-color: $red;
+    border-radius: 500px;
+}

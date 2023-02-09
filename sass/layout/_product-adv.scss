@@ -1,0 +1,82 @@
+@import '../abstract/vars';
+.product__advantage{
+    .product__advantage-heading,.h-section,
+    .product__advantage-video,.product__advantage-text{
+        margin-bottom: 50px;
+    }
+    .product__advantage-text{
+        padding-left: 20px;
+        row-gap: 10px;
+        p{
+            margin-bottom: 10px;
+        }
+        i.fa-sharp {
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .product__advantage-heading{
+            h2{
+                text-align: center;
+                font-size: 38px;
+            }
+        }
+        .row{
+            .order_1{
+                order: 2;
+            }
+            .order_2{
+                order: 0;
+            }
+            .order_3{
+                order: 1;
+            }
+            .order_4{
+                order: 3;
+            }
+            .order_5{
+                order: 4;
+            }
+        }
+    }
+    .product__advantage__boxes{
+        margin-top: 20px;
+        margin-bottom: 80px;
+        .advantage__box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 20px ;
+            padding: 25px;
+            height: 175px;
+            width: 340px;
+            .advantage__box-top{
+                display: flex;
+                align-items: center;
+                ._icon{
+                    margin-right: 20px;
+                    width: 45px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background: $bkLinearBk;
+                    
+                }
+                ._title{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                }
+            }
+        }
+        @media screen and (max-width: 768px ) {
+            width: 300px;
+            justify-self: center;
+        }
+    }
+}
+

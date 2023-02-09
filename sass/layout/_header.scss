@@ -1,0 +1,206 @@
+@import '../abstract/vars';
+/* ============ 🔵🔵  OPER HEADER  🔵🔵 ============ */
+
+.oper__header{
+    padding-top: 40px;
+    @include backgroundElipse( 0%, 80%);
+    .main-order{
+        .header__heading{
+            row-gap: 20px;
+            p.p-br-l{
+                font-size: 16px;
+                border-left: 1px solid $offWh;
+                padding-left: 30px;
+            }
+        }
+    }
+    .header__offer-box{
+        padding-left: 70px;
+        p.offer__discoount{
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            background: $bkLinearBk;
+            font-size: 22px;
+            font-weight: 700;
+            small{
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+        .offer__btn{
+            button{
+                background: $bkLinearRed;
+                width: 180px;
+                height: 51px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: $offWh;
+                border: none;
+                border-radius: 80px;
+                margin-top: 20px;
+                margin-left: 50px;
+            }
+        }
+    }
+    
+    .header__statics-box{
+        ._num{
+            margin-right: 10px;
+            font-family: $montserrat;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 52px;
+        }
+        ._content{
+            padding-left: 10px;
+            border-left: 1px solid $offWh;
+            p._p-lg{
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            p._p-sm{
+                font-weight: 400;
+                font-size: 12px;
+            }
+        }
+    }
+    .header__form{
+        form{
+            input.search_field{
+                flex-basis: 50%;
+                height: 52px;
+                border-radius: 50px;
+                padding: 5px 20px;
+                border: none;
+                &::placeholder{
+                    color: $gr;
+                    font-size: 14px;
+                    line-height: 0;
+                }
+            }
+            select.select_filed{
+                flex-basis: 15%;
+                height: 52px;
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 20px;
+                color: $mbk;
+                text-align: center;
+                
+                
+            }
+            button.form__btn{
+                flex-basis: 15%;
+                border: none;
+                background: $bkLinearRed;
+                height: 48px;
+                border-radius: 50px;
+                color: $offWh;
+                font-family: $montserrat;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .main-order{
+            .header__heading{
+                h2{
+                    font-size: 44px;
+                }
+            }
+        }
+    }
+    @media  (min-width: 768px) and (max-width: 992px) {
+        .row{
+            .form-order{
+                .header__form{
+                    form{
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 10px;
+                        input.search_field, button.form__btn{
+                            flex-basis: 50%;
+                        }
+                        select.select_filed{
+                            flex-basis: 23%;
+                        }
+                        button.form__btn{
+                            flex-basis: 40%;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 10px;
+        .row{
+            justify-content: flex-end;
+            .heading-order{
+                order: 1;
+            }
+            .main-order{
+                order: 0;
+                .header__heading{
+                    h2{
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                    p.p-br-l{
+                        font-size: 18px;
+                        border-left: 1px solid $offWh;
+                        padding-left: 30px;
+                    }
+                }
+            }
+            .offer-order{
+                order: 2;
+                .header__offer-box{
+                    p.offer__discoount{
+                        font-size: 14px;
+                        line-height: 1.3;
+                    }
+                    .offer__btn{
+                        button{
+                            font-weight: 600;
+                            font-size: 16px;   
+                        }
+                    }
+                }
+            }
+
+            .header__statics-box{
+                ._num{
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+            .form-order{
+                order: 3;
+                .header__form{
+                    form{
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        input.search_field, button.form__btn{
+                            flex-basis: 100% ;
+                        }
+                        select.select_filed{
+                            flex-basis: 47% ;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ============ 🟠🟠  OPER HEADER  🟠🟠 ============ */

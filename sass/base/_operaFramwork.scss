@@ -1,0 +1,96 @@
+@import '../abstract/vars';
+
+.d-flex{
+    display: flex;
+}
+.d-md-flex{
+    @media screen and  (min-width: 992px) {
+        display: flex;
+    } 
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-md-column{
+    @media screen and  (min-width: 992px) {
+        flex-direction: column;
+    } 
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+.align-items-center{
+    align-items: center;
+}
+.align-items-md-start{
+    @media screen and  (min-width: 992px) {
+        align-items: flex-start;
+    } 
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-md-start{
+    @media screen and  (min-width: 992px) {
+        justify-content: flex-start;
+    } 
+}
+.justify-content-md-end{
+    @media screen and  (min-width: 992px) {
+        justify-content: flex-end;
+    }
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+
+.flex-md-row{
+    @media screen and  (min-width: 992px) {
+        flex-direction: row;
+    } 
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+.d-md-none{
+    @media screen and  (min-width: 992px) {
+        display: none;
+    } 
+}
+
+.d-sm-block{
+    @media screen and  (min-width: 768px) {
+        display: block;
+    } 
+}
+.d-md-block{
+    @media screen and  (min-width: 992px) {
+        display: block;
+    } 
+}
+.d-lg-block{
+    @media screen and  (min-width: 1200px) {
+        display: block;
+    } 
+}
+
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+
+.border-solid-sm{
+    border: 1px solid $offWh;
+    padding: 35px;
+}

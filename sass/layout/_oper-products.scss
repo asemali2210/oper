@@ -1,0 +1,103 @@
+@import '../abstract/vars';
+
+.oper__products{
+    .row{
+        .col-12{
+            padding: 0 !important;
+        }
+    }
+    .product__box{
+        height: 360px;
+        display: flex;
+        padding: 45px;
+        align-items: flex-start;
+        ._left{
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 80%;
+            ._title{
+                row-gap: 10px;
+                display: flex;
+                flex-direction: column;
+                h4.op-h-md{
+                    position: relative;
+                    padding-bottom: 10px;
+                    &::after{
+                        position: absolute;
+                        content: " ";
+                        width: 20px;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: $offWh;
+                    }
+                }
+            }
+        }
+        
+        ._right{
+            flex-basis: 15%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            ._price{
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                background: $bkLinearBk;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                font-weight: 400;
+                font-size: 24px;
+                font-family: $poppins;
+            }
+            ._icon{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $offWh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    cursor: pointer;
+                    transition: all .3s;
+                    background-color: $offWh;
+                    color: $mbk;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: 992px) {
+        .col-sm-6{
+            width: calc(100 /(12/ 6) ) * 1%;
+            padding: 10px;
+        }
+        .product__box{
+            align-items: flex-end;
+            ._left{
+                flex-basis: 90%;
+
+            }
+            ._right{
+                flex-basis: 10%;
+                ._price{
+                    width: 45px;
+                    height: 45px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 560px) {
+        .col-sm-6{
+            width: calc(100 /(12/ 12) ) * 1%;
+            padding: 10px;
+        }
+    }
+}

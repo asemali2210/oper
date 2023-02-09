@@ -1,0 +1,51 @@
+@import '../abstract/vars';
+
+.oper__subscribtion{
+    background-color: #2c2c2c;
+    padding: 100px;
+    .newsletter__form{
+        form{
+            display: flex;
+            gap: 10px;
+            input{
+                border: none;
+                border-bottom: 1px solid $offWh;
+                background: transparent;
+                width: 450px;
+                &::placeholder{
+                    font-family: $montserrat;
+                    color: $offWh;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+            i._icon{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid $offWh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        cursor: pointer;
+                        transition: all .3s;
+                        background-color: $offWh;
+                        color: $mbk;
+                    }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .newsletter__form{
+            form{
+                justify-content: space-between;
+                input{
+                    width: 200px;
+                    flex-basis: 70%;
+                }
+            }
+        }
+    }
+}

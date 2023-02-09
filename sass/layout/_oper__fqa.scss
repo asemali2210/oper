@@ -1,0 +1,50 @@
+@import '../abstract/mixins';
+@import '../abstract/vars';
+
+.oper__fqa{
+    padding-top: 80px;
+    @include backgroundElipse(-50px, 100%);
+    padding-bottom: 80px;
+    .fqa__header{
+        margin-bottom: 40px;
+    }
+    .oper__according{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        ._text{
+            border-bottom: 1px solid $offWh;
+            padding-bottom: 10px;
+            cursor: pointer;
+            .according__q{
+                display: flex;
+                justify-content: space-between;
+                i.fa-caret-down{
+                    padding-left: 20px;
+                }
+            }
+            .according__a{
+                display: none;
+                padding: 10px;
+
+                &.toggle--according{
+                    transition: all .3s;
+                    display: block;
+                }
+            }
+        }
+    }
+    .fqa__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 30px;
+        p,i{
+            width: 65%;
+            margin-bottom: 20px;
+            flex-basis: 70%;    
+        }
+    }
+}

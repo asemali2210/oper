@@ -1,0 +1,205 @@
+@use './theme/dark-mood.scss';
+@import './base/grid';
+@import './base/rest';
+@import './base/operaFramwork';
+@import './abstract/vars';
+@import './abstract/mixins';
+@import './base/typograghy';
+@import './layout/nav';
+@import './layout/header';
+@import './layout/about-product';
+@import './layout/product-adv';
+@import './layout/oper-products';
+@import './layout/oper__fqa';
+@import './layout/discount-promotion';
+@import './layout/newslatter';
+@import './layout/oper-footer';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,body {
+    background-color: #252525;
+    position: relative;
+    color: #fff;
+    font-family: $montserrat !important;
+    scroll-behavior: smooth;
+}
+body{
+    @include backgroundElipse(110%, -150px);
+}
+
+
+// ==== 🍃🍃 socail icons for sidebvar 
+@mixin socialIcons{
+    ul.social__icons{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li.social__icons-items{
+            a.social__icons-link{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #4E4E4E;
+                font-size: 16px;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+// ==== 🍃🍃logo's Typograpghy
+@mixin sideLogo{
+    h1{
+        font-family: $poppins;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+// ==== 🍃🍃 boxes that carry heading 
+
+@mixin sideBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+// ==== 🍃🍃 heading of sections 
+
+@mixin sideHeading{
+    writing-mode:vertical-rl;
+    rotate: 180deg;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+// ==== 🍃🍃 context of left columns
+.opera-1-left-col,.opera-2-left-col, .opera-3-left-col{
+    border-right: 1px solid $wh;
+    flex-basis: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 992px){
+        display: none;
+        flex-basis: unset;
+    }
+}
+
+
+.opera-1-left-col{
+    justify-content: space-between;
+    .side__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .side__logo{
+            position: absolute;
+            @include sideLogo();
+        }
+        .side__header-box{
+            @include sideBox();
+            gap: 40px;
+            justify-content: space-between;
+            
+            p.side__header-heading{
+                @include sideHeading();
+            }
+            @include socialIcons();
+        }
+    }
+    .side__about-container{
+        position: relative;
+        .side__about-box{
+            @include sideBox();
+            p.side__about-heading{
+                @include sideHeading();
+            }
+        }
+    }
+    .side__advantages-container{
+        position: relative;
+        .side__advantages-box{
+            position: absolute;
+            p.side__advantages-heading{
+                @include sideHeading();
+            }
+        }
+    }
+    
+    
+}
+
+.opera-2-left-col{
+   
+    justify-content: end;
+    .side__help-container{
+        position: relative;
+        .side__help-box{
+            @include sideBox();
+            p.side__help-heading{
+                @include sideHeading();
+            }
+        }
+    }
+    .side__promotion-container{
+        position: relative;
+        .side__promotion-box{
+            @include sideBox();
+            p.side__promotion-heading{
+                @include sideHeading();
+            }
+        }
+    }
+}
+
+.opera-3-left-col{
+
+ 
+    .side__footer-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        .side__footer__logo{
+            @include socialIcons();
+
+        }
+        .side__footer-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            justify-content: space-between;
+            
+            p.side__header-heading{
+                @include sideHeading();
+            }
+            @include socialIcons();
+        }
+    }
+}
+.opera-right-col{
+    padding-left: 40px;
+    flex-basis: 86%;
+    @media screen and (max-width: 992px){
+        padding-left: 0;
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+
