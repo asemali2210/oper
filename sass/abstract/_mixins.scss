@@ -1,6 +1,10 @@
+
+// background Elipse
 @mixin backgroundElipse($x,$y){
-    background-image: url('../../images/bkElipseTopRight.png');
+    background-image: url('../../images/bkElipse.png');
     background-repeat: no-repeat;
     background-size: 420px;
     background-position: $x $y;
 }
+
+

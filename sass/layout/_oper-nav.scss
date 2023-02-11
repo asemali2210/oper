@@ -1,0 +1,217 @@
+@import '../abstract/vars';
+@import '../abstract/mixins';
+.oper__nav{
+    position: relative;
+    z-index: 1000;
+    
+    .nav__items{
+        padding: 15px 20px ;
+        overflow: hidden;
+        .nav__form{
+            position: relative;
+            input.nav__search{
+                background-color: $wh;
+                border-radius: 90px;
+                padding: 3px 18px;
+                border: none;
+                height: 36px;
+                &::placeholder{
+                    color: $gr;
+                    font-family: $poppins;
+                }
+            }
+            span._icon{
+                display: block;
+                position: relative;
+                margin-left: -40px;
+                top: 1px;
+                width: 32px;
+                height: 32px;
+                display:inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                cursor: pointer;
+                background: linear-gradient(135deg, #8D0606 0%, #252525 100%);
+            }
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
+        }
+        .nav__links{
+            ul.nav__links-items{
+                margin: 0;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                li.item-link{
+                    margin: 0;
+                    a{
+                        font-weight: 300;
+                        font-size: 16px;
+                        margin: 0;
+                        color: $wh;
+                    }
+                    &.active{
+                        a{
+                            font-weight: 500;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .nav__btns{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .nav__btns-cart,.nav__btns-auth{
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                cursor: pointer;
+                margin: 0 5px;
+                font-size: 14px;
+            }
+            .nav__btns-cart{
+                background: linear-gradient(135deg, #4F4F4F 0%, rgba(79, 79, 79, 0) 100%);
+            }
+            .nav__btns-auth{
+                background: linear-gradient(135deg, #8D0606 0%, rgba(141, 6, 6, 0) 100%);
+            }
+        }
+    }
+    .nav__sm{
+        display: none;
+    }
+    @media screen and (min-width: 992px) {
+        
+    }
+    @media screen and (max-width: 992px) {
+        .nav__items{
+            display: none;
+        }
+        .nav__sm{
+            display: flex;
+            position: relative;
+            padding: 10px;
+
+            .left__btns{
+                flex-basis: 20%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 8px;   
+
+                .search_btn,.toggle_btn{
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    font-size: 17px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: $mbk;
+                }
+                .search_btn{
+                    background: linear-gradient(135deg, #8D0606 0%, rgba(141, 6, 6, 0) 100%);
+                }
+                .toggle_btn{
+                    background: linear-gradient(135deg, #4F4F4F 0%, rgba(79, 79, 79, 0) 100%);
+
+                }
+            }
+            .nav__sm-logo{
+                flex-basis: 59%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h1{
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 21px;
+                }
+            }
+            .nav__sm-items{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 50vh;
+                background-color: $gr;
+                border-radius: 0 0 20px 20px;
+                transition: all 3s;
+                ul.nav__links-items{
+                    height: 90%;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 0;
+                    z-index: 5;
+                    li.item-link{
+                        margin: 0;
+                        a{
+                            font-weight: 300;
+                            font-size: 16px;
+                            margin: 0;
+                            color: $wh;
+                        }
+                        &.active{
+                            a{
+                                font-weight: 500;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .right__btns{
+                flex-basis: 20%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 8px;
+                .nav__btns-cart,.nav__btns-auth{
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+                .nav__btns-cart{
+                    background: linear-gradient(135deg, #4F4F4F 0%, rgba(79, 79, 79, 0) 100%);
+                }
+                .nav__btns-auth{
+                    background: linear-gradient(135deg, #8D0606 0%, rgba(141, 6, 6, 0) 100%);
+                }
+            }
+            .nav__sm-items{
+                display: none;
+            }
+            &.toggle--nav{
+                background-color: $gr;
+                border-radius: 20px 20px 0 0;
+                transition: all .4s;
+
+                .nav__sm-items{ 
+                    display: block;
+                }
+            }
+        }
+    }
+}

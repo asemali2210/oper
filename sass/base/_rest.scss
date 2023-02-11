@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-  }
+}
 a, a:hover{
     color: $wh;
     text-decoration: none;
@@ -12,6 +12,6 @@ a, a:hover{
 }
 
 input:focus{
-    outline-color: $red;
+    outline-color: $gr;
     border-radius: 500px;
 }

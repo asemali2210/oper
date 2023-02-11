@@ -1,30 +1,27 @@
-@use './theme/dark-mood.scss';
+@use './abstract/vars';
 @import './base/grid';
 @import './base/rest';
 @import './base/operaFramwork';
-@import './abstract/vars';
 @import './abstract/mixins';
 @import './base/typograghy';
-@import './layout/nav';
-@import './layout/header';
-@import './layout/about-product';
-@import './layout/product-adv';
-@import './layout/oper-products';
-@import './layout/oper__fqa';
-@import './layout/discount-promotion';
-@import './layout/newslatter';
-@import './layout/oper-footer';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './layout/all';
+@import  './theme/themes';
+
+// Fonts 🥖🥖🥖
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,body {
-    background-color: #252525;
-    position: relative;
-    color: #fff;
     font-family: $montserrat !important;
     scroll-behavior: smooth;
+    background-color: $background-dark-prim-color;
+    color: $offWh;
+    position: relative;
 }
+
 body{
-    @include backgroundElipse(110%, -150px);
+    &.light-mood{
+        @include light-theme;
+    }
 }
 
 
@@ -40,6 +37,7 @@ body{
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
+                color: $wh;
                 background-color: #4E4E4E;
                 font-size: 16px;
                 line-height: 1;
@@ -94,7 +92,6 @@ body{
     }
 }
 
-
 .opera-1-left-col{
     justify-content: space-between;
     .side__header{
@@ -141,7 +138,7 @@ body{
 
 .opera-2-left-col{
    
-    justify-content: end;
+    justify-content: flex-end;
     .side__help-container{
         position: relative;
         .side__help-box{
@@ -190,6 +187,7 @@ body{
         }
     }
 }
+
 .opera-right-col{
     padding-left: 40px;
     flex-basis: 86%;
@@ -199,7 +197,27 @@ body{
     }
 }
 
-
-
-
+// lang & dark-mood fixed buttons
+.oper_setting{
+    position: fixed;
+    bottom: 35px;
+    left: 35px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    button{
+        cursor: pointer;
+        border: none;
+        background-color: $red;
+        color: $wh;
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+        a{
+            color: $wh;
+        }
+    }
+}
 

@@ -1,0 +1,20 @@
+.about__product{
+    margin-bottom: 80px;
+    @include backgroundElipse(90%, -10px);
+    .h-section{
+        margin: 50px 0;
+    }
+    .about__product-heading{
+        margin: 20px 0;
+    }
+    .about__product-feature{
+        column-gap: 10px;
+        i.fa{
+            font-size: 20px;
+        }
+    }
+    .product-feature_text{
+        white-space: nowrap;
+        gap: 0;
+    }
+}

@@ -1,7 +1,7 @@
 @import '../abstract/mixins';
 @import '../abstract/vars';
 .oper__footer{
-    @include backgroundElipse(-50px, 100%);
+    @include backgroundElipse(10px, 100%);
     height: 80vh;
     .footer__box{
         display: flex;

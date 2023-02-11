@@ -1,4 +1,4 @@
-
+//  container for all devices
 .container{
   width: 100%;
   margin-right: auto;
@@ -26,7 +26,7 @@
     width: 100%;
   }
 }
-
+// row grid
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
 
 
 
-
+// loop all colums class for using to all media
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: calc(100 /(12/ $i) ) * 1%;

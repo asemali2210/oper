@@ -1,0 +1,77 @@
+/* // color palette  */
+body {
+  font-family: "Cairo", sans-serif !important;
+}
+
+.opleftera-right-col {
+  padding-left: 0;
+  padding-right: 40px;
+}
+@media screen and (max-width: 992px) {
+  .opleftera-right-col {
+    padding-right: 0;
+  }
+}
+
+.opera-1-left-col, .opera-2-left-col, .opera-3-left-col {
+  border-right: none;
+  border-left: 1px solid #ffffff;
+}
+.opera-1-left-col p.side__header-heading, .opera-2-left-col p.side__header-heading, .opera-3-left-col p.side__header-heading {
+  rotate: none !important;
+}
+
+.oper__nav .nav__items .nav__form span._icon {
+  margin-left: none;
+  margin-right: -40px;
+}
+
+.oper__header .main-order .header__heading p.p-br-l {
+  border-left: none;
+  padding-left: none;
+  border-right: 1px solid #f5f5f5;
+  padding-right: 30px;
+  text-align: right;
+}
+.oper__header .header__offer-box {
+  padding-left: none;
+  padding-right: 70px;
+}
+.oper__header .header__offer-box .offer__btn button {
+  margin-left: none;
+  margin-right: 50px;
+}
+.oper__header .header__statics-box ._num {
+  margin-right: none;
+  margin-left: 10px;
+}
+.oper__header .header__statics-box ._content {
+  padding-left: none;
+  border-left: none;
+  padding-right: 10px;
+  border-right: 1px solid #f5f5f5;
+}
+
+.oper__products .product__box ._left ._title h4.op-h-md::after {
+  left: unset;
+  right: 0;
+}
+
+.product__advantage .product__advantage-text {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.product__advantage .product__advantage__boxes .advantage__box .advantage__box-top ._icon {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.oper__footer .footer__box ul.footer__items li.item__link i.fa-angle-right {
+  margin-right: none;
+  margin-left: 10px;
+}
+
+.oper__fqa .oper__according ._text .according__q i.fa-caret-down {
+  padding-left: none;
+  padding-right: 20px;
+}/*# sourceMappingURL=rtl.css.map */
